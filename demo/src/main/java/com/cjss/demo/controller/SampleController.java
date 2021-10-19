@@ -12,8 +12,8 @@ public class SampleController {
     private HelloService helloService;
 
     @GetMapping("/get-data")
-    public String index() {
-        return "Greetings from Spring Boot!" + helloService.getDetails();
+    public String getData() {
+        return "Greetings from Spring Boot!" +  helloService.getDetails();
     }
 
 }
