@@ -1,25 +1,10 @@
 package com.cjss.demo.service;
 
 
-
-public class HelloService {
-
-    private WeekService weekService;
+public class WeekService {
 
     public String getDetails() {
-        return weekService.getWeekDay(1);
-    }
-
-    public void dummyMethod() {
-        // TODO:
-    }
-
-    public void dummyMethod(String value1) {
-        // TODO:
-    }
-
-    public void dummyMethod(String value1, String value2) {
-        // TODO:
+        return "Dummy details";
     }
 
     public String getWeekDay(int day) {
@@ -43,11 +28,4 @@ public class HelloService {
         }
     }
 
-    public WeekService getWeekService() {
-        return weekService;
-    }
-
-    public void setWeekService(WeekService weekService) {
-        this.weekService = weekService;
-    }
 }

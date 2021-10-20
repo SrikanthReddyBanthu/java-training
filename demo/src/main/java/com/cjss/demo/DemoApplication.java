@@ -5,9 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ImportResource;
+
 import java.util.Arrays;
 
 @SpringBootApplication
+@ImportResource("classpath:beans.xml")
 public class DemoApplication {
 
 	public static void main(String[] args) {

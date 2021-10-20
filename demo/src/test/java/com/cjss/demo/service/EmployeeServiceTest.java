@@ -17,13 +17,31 @@ public class EmployeeServiceTest {
     private EmployeeService employeeService;
 
     @Test
-    public void test() {
+    public void testGetEmployeeByDesignation() {
 
-        List<EmployeeModel> employees = employeeService.add(new EmployeeModel());
-        String s1 = "test1";
-        String s2 = "test";
-        assertEquals(s2, s1);
+        EmployeeModel emp1 = new EmployeeModel(101 , "Rama", "it");
+        EmployeeModel emp2 = new EmployeeModel(102 , "John", "Sales");
+        EmployeeModel emp3 = new EmployeeModel(103 , "Gopi", "it");
+        employeeService.add(emp1);
+        employeeService.add(emp2);
+        employeeService.add(emp3);
 
+        List<EmployeeModel> employees = employeeService.get("it");
+
+        assertEquals(2, employees.size());
+        assertEquals(101, employees.get(0).getId());
+        assertSame(emp1, employees.get(0));
+
+    }
+    @Test
+    public void testGetEmployeeByDesignation1() {
+
+
+        List<EmployeeModel> employees = employeeService.get("it");
+
+        assertEquals(2, employees.size());
+        assertEquals(101, employees.get(0).getId());
+//        assertSame(emp1, employees.get(0));
 
     }
 

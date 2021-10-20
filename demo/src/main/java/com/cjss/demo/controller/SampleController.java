@@ -13,6 +13,9 @@ public class SampleController {
 
     @GetMapping("/get-data")
     public String getData() {
+        helloService.dummyMethod();
+        helloService.dummyMethod("rama");
+        helloService.dummyMethod("rama", "gopi");
         return "Greetings from Spring Boot!" +  helloService.getDetails();
     }
 
