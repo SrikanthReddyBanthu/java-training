@@ -5,6 +5,7 @@ import com.cjss.demo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -15,7 +16,7 @@ public class Controller1 {
 
 
     @PostMapping("/add")
-    List<EmployeeModel> add(@RequestBody EmployeeModel newEmployee) {
+    List<EmployeeModel> add(@Valid @RequestBody EmployeeModel newEmployee) {
 
         return employeeService.add(newEmployee);
     }
