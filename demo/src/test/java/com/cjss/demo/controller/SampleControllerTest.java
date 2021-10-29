@@ -30,15 +30,15 @@ public class SampleControllerTest {
         when(helloService.getDetails()).thenReturn("dummy test details");
 
         // When
-        String data = sampleController.getData();
+//        String data = sampleController.getData();
 //        String actualResponse = helloService.getDetails();
 
         // Then
-        assertEquals("Greetings from Spring Boot!dummy test details", data);
-        verify(helloService).dummyMethod();
-//        verify(helloService).dummyMethod("rama");
-        verify(helloService, times(1)).dummyMethod(anyString());
-        verify(helloService).dummyMethod(anyString(), eq("gopi"));
+//        assertEquals("Greetings from Spring Boot!dummy test details", data);
+//        verify(helloService).dummyMethod();
+        verify(helloService).dummyMethod("rama");
+//        verify(helloService, times(1)).dummyMethod(anyString());
+//        verify(helloService).dummyMethod(anyString(), eq("gopi"));
 
     }
 

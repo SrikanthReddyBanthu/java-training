@@ -1,7 +1,6 @@
 package com.cjss.demo.service;
 
 
-
 public class HelloService {
 
     private WeekService weekService;
